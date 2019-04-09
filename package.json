@@ -16,5 +16,16 @@
     "egg-plugin",
     "nuxt"
   ],
-  "author": "Illyrix"
+  "author": "Illyrix",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Illyrix/egg-nuxt-merge.git"
+  },
+  "files": [
+    "app",
+    "config",
+    "lib",
+    "agent.js",
+    "app.js"
+  ]
 }
