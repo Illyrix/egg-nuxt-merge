@@ -1,0 +1,20 @@
+{
+  "eggPlugin": {
+    "name": "nuxtMerge"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "egg": "^2.10.0",
+    "egg-bin": "^4.8.1",
+    "egg-mock": "^3.19.3"
+  },
+  "name": "egg-nuxt-merge",
+  "version": "1.0.0",
+  "description": "an egg.js plugin for merging nuxt into egg.js",
+  "keywords": [
+    "egg",
+    "egg-plugin",
+    "nuxt"
+  ],
+  "author": "Illyrix"
+}
