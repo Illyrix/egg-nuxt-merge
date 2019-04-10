@@ -27,5 +27,8 @@
     "lib",
     "agent.js",
     "app.js"
-  ]
+  ],
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
 }
