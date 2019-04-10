@@ -4,7 +4,7 @@ Plugin for merging nuxt into Egg.js
 ### Features
 Make nuxt and Egg.js listen in one server but they are in separated preojects. Nuxt renders pages in the middleware of Egg.js, so cookies can be correctly set by Egg.js(especially CSRF plugin is enable)
 * `app.nuxt` | `ctx.nuxt` returns nuxt object  
-  use `await ctx.nuxt.render(ctx.req, ctx.res)` to render page explicitly; by default it always render page unless `config.nuxtMerge.ignore` or `config.nuxtMerge.match` were set
+  use `await ctx.nuxt.render(ctx.req, ctx.res)` to render page explicitly; by default it always render page unless `config.nuxtMerge.ignorePrefix` or `config.nuxtMerge.matchPrefix` were set
 
 ### Install
 Use `npm link` or `yarn link` to link nuxt app into egg app(optional)
@@ -66,7 +66,7 @@ Then add your nuxt app package name or path to config
 // in config/config.***.js
 config.nuxtMerge = {
   appPkg: '{Your nuxt app package name}',
-  ignore: '/api/v1'
+  ignorePrefix: '/api/v1'
 }
 ```
 If your apis have a route prefix, you can add an ignore prefix to the config of this plugin
@@ -76,10 +76,11 @@ If your apis have a route prefix, you can add an ignore prefix to the config of 
   Path to nuxt app root, absoluted or relative(to egg app base dir) are both OK
 * nuxt app package `exports.appPkg`  
   Your nuxt app package name; if you link nuxt app via `yarn link`, the package name is the nuxt app base dir name
-* ignore `exports.ignore`  
+* ignorePrefix `exports.ignorePrefix`  
   Ignore some queries. See [here](https://eggjs.org/en/basics/middleware.html#general-configuration) for general config of middleware
-* match `exports.match`  
+* matchPrefix `exports.matchPrefix`  
   Only enable as query path is matched. Click the link above for more details
 
 ### Notice
-In `prod` environment, you need to build nuxt app at least once manually via `npm build` in nuxt app before running `npm start` in egg app
+In `prod` environment, you need to build nuxt app at least once manually via `npm build` in nuxt app before running `npm start` in egg app  
+`ignorePrefix` will overwrite `matchPrefix` settings

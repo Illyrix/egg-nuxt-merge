@@ -9,7 +9,7 @@
     "egg-mock": "^3.19.3"
   },
   "name": "egg-nuxt-merge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "an egg.js plugin for merging nuxt into egg.js",
   "keywords": [
     "egg",

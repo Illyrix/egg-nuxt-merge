@@ -1,4 +1,6 @@
 module.exports = {
   appPath: '',
-  appPkg: ''
+  appPkg: '',
+  ignorePrefix: '',
+  matchPrefix: ''
 }
